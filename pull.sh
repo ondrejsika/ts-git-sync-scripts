@@ -1,8 +1,8 @@
 #!/bin/sh
 
-public_branch=public
+public_branch=master-public
 
 git switch $public_branch
-git pull public master
+git pull --no-rebase --no-ff public master
 git switch master
-git merge --no-ff $branch
+git merge --no-ff $public_branch
