@@ -13,4 +13,4 @@ git filter-repo --refs $patch_branch $paths_to_exclude --invert-paths --force
 
 git switch $public_branch
 git merge --no-ff $patch_branch
-git push public $patch_branch:master -u
+git push public $public_branch:master -u

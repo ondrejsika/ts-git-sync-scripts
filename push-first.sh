@@ -8,7 +8,7 @@ paths_to_exclude=$(awk '{print "--path " $0}' .publicignore | xargs)
 git switch -c $public_branch
 
 # Filter the current branch only
-git filter-repo --refs $public_branch $paths_to_exclude --invert-paths --force
+git filter-repo --refs $public_branch $paths_to_exclude --invert-paths
 
 git push public $public_branch:master -u
 
